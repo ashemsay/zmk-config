@@ -13,6 +13,7 @@
 #define DEFAULT 0
 #define NUMMOVE 1
 #define FUNCTION 2
+#define BLUETOOTH 3
 
 / {
     behaviors {
@@ -65,7 +66,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &kp DEL   &lt NUMMOVE BSPC &lt FUNCTION SPACE &kp RET
+                                           &kp DEL   &lt NUMMOVE BSPC &lt FUNCTION SPACE &lt BLUETOOTH RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -98,6 +99,23 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│PLAY/PAUSE│PREVIOUS  │NEXT      │ F11      │ F12      │   │  MUTE    │ VOL DOWN │  VOL UP  │BRIGHT DWN│BRIGHT UP │
            &kp C_PP   &kp C_PREV &kp C_NEXT  &kp F11    &kp F12   &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        bluetooth_layer {
+	    display-name = "Bluetooth";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│    BT 1  │    BT 2  │  BT 3    │   BT 4   │   BT 5   │   │  BT CLR  │          │          │          │BT CLR ALL│
+     &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_CLR  &trans     &trans     &trans    &bt BT_CLR_ALL
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ DISC BT1 │ DISC BT2 │ DISC BT3 │ DISC BT4 │ DISC BT5 │   │          │          │          │          │          │
+            &bt BT_DISC 1     &bt BT_DISC 2     &bt BT_DISC 3      &bt BT_DISC 4     &bt BT_DISC 5         &trans     &trans     &trans    &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &trans      &trans       &trans     &trans    &trans        &trans       &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

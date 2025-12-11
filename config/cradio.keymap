@@ -89,10 +89,10 @@
         //│ ESCAPE   │PAGE DOWN │PAGE UP   │ HOME     │ END      │   │  LEFT    │ DOWN     │  UP      │  RIGHT   │PRINT SCRN│
             &kp ESC &kp PAGE_DOWN &kp PAGE_UP  &kp HOME &kp END       &kp LEFT   &kp DOWN     &kp UP   &kp RIGHT  &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │          │          │          │          │   │          │          │          │          │  INSERT  │
-           &kp CAPS    &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &kp INSERT
+        //│          │          │          │          │          │   │          │          │          │          │  INSERT  │
+           &trans       &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &kp INSERT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &kp CAPS     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

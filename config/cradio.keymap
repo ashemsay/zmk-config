@@ -87,7 +87,7 @@
              &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ESCAPE   │PAGE DOWN │PAGE UP   │ HOME     │ END      │   │  LEFT    │ DOWN     │  UP      │  RIGHT   │PRINT SCRN│
-            &kp ESC &kp PAGE_DOWN &kp PAGE_UP  &kp HOME &kp END       &kp LEFT   &kp DOWN     &kp UP   &kp RIGHT  &kp PSCRN
+           HRML(ESC, PAGE_DOWN, PAGE_UP, HOME, END)                  HRMR(LEFT, DOWN, UP, RIGHT, PSCRN)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │  INSERT  │
            &trans       &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &kp INSERT
@@ -103,8 +103,8 @@
         //│    F1    │    F2    │   F3     │    F4    │   F5     │   │    F6    │    F7    │   F8     │    F9    │    F10   │
              &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6     &kp F7     &kp F8     &kp F9    &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │          │PLAY/PAUSE│PREVIOUS  │NEXT      │   │  MUTE    │ VOL DOWN │  VOL UP  │BRIGHT DWN│BRIGHT UP │
-            &kp TAB    &trans    &kp C_PP   &kp C_PREV &kp C_NEXT &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP
+        //│ TAB      │  STOP    │PLAY/PAUSE│PREVIOUS  │NEXT      │   │  MUTE    │ VOL DOWN │  VOL UP  │BRIGHT DWN│BRIGHT UP │
+            HRML(TAB, C_STOP, C_PP, C_PREV, C_NEXT)                       HRMR(C_MUTE, C_VOL_DN, C_VOL_UP, C_BRI_DN, C_BRI_UP)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ F11      │ F12      │   │          │          │          │          │          │
             &trans     &trans     &trans    &kp F11    &kp F12           &trans     &trans     &trans    &trans     &trans
